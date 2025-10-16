@@ -1,0 +1,30 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  display: inline;
+}
+
+.nav-list {
+  padding-inline-start: 0;
+  display: inline;
+}
+
+#contact-form input {
+  display: block;
+  width: 200px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#contact-form textarea {
+  width: 300px;
+  height: 100px;
+}
+
+#contact-form input[type="submit"] {
+  text-align: left;
+}
