@@ -11,21 +11,19 @@ const blogEntries: Blog[] = [
   {
     title: "Hello world",
     date: "10-16-2025",
-    description:
-      "As part of milestone 1, I've had no choice but to make this blog. Expect to see more posts here in the future about my life or cool tech problems I've solved or have at least tried to.",
+    description: "My first blog post",
     image: "welcome.jpg",
     imageAlt: "Green whiteboard with the text 'welcome' and a smiley face",
-    slug: "first-post",
+    slug: "blogs/first-post.html",
   },
   {
     title: "Subway",
     date: "10-16-2025",
-    description:
-      "Subway is genuinely the best place to eat on campus. No, I haven't eaten everywhere, but for the price, it is the greatest bang for your buck. Sure, you COULD eat at Chick-fil-a, but you get MUCH less actual *food* there for the same price. A 12 inch sandwich from Subway is ONLY about 10 bucks, not to mention the cookies. The cookies are half of the appeal. Please be careful when ordering cookies on GrubHub, as they can be forgotten. CHECK YOUR BAGS. To sum up, if you haven't been to a subway on campus, try it out. Reliable good cheap food that's open late.",
+    description: "A rant about my favorite restaurant on campus",
     image: "subwaycookiebag.jpg",
     imageAlt:
       "Subway cookie bag with the text 'lookie lookie, I've got a cookie'",
-    slug: "subway",
+    slug: "blogs/subway.html",
   },
 ];
 
@@ -35,16 +33,19 @@ const addEntriesToDOM = () => {
   blogEntries.forEach((entry) => {
     const postContainer = document.createElement("div");
     const title = document.createElement("h1");
+    const titleLink = document.createElement("a");
     const desc = document.createElement("p");
     const date = document.createElement("p");
     const img = document.createElement("img");
     postContainer.classList.add("blog");
+    titleLink.href = entry.slug;
     title.innerHTML = entry.title;
     desc.innerHTML = entry.description;
     date.innerHTML = entry.date;
     img.src = entry.image;
     img.alt = entry.imageAlt;
-    postContainer.appendChild(title);
+    titleLink.appendChild(title);
+    postContainer.appendChild(titleLink);
     postContainer.appendChild(date);
     postContainer.appendChild(desc);
     postContainer.appendChild(img);
