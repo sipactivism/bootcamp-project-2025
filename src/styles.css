@@ -30,7 +30,7 @@
 }
 
 .blog {
-  max-width: 50%;
+  max-width: 40%;
   border: 2px solid white;
   margin-bottom: 15px;
 }
@@ -46,5 +46,11 @@
 }
 
 .blog img {
+  width: 25%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.blog-image {
   width: 25%;
 }
