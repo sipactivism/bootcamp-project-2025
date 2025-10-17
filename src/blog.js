@@ -16,9 +16,25 @@ var blogEntries = [
         slug: "subway",
     },
 ];
+var content = document.querySelector(".content");
 var addEntriesToDOM = function () {
     blogEntries.forEach(function (entry) {
-        console.log(entry);
+        var postContainer = document.createElement("div");
+        var title = document.createElement("h1");
+        var desc = document.createElement("p");
+        var date = document.createElement("p");
+        var img = document.createElement("img");
+        postContainer.classList.add("blog");
+        title.innerHTML = entry.title;
+        desc.innerHTML = entry.description;
+        date.innerHTML = entry.date;
+        img.src = entry.image;
+        img.alt = entry.imageAlt;
+        postContainer.appendChild(title);
+        postContainer.appendChild(date);
+        postContainer.appendChild(desc);
+        postContainer.appendChild(img);
+        content === null || content === void 0 ? void 0 : content.appendChild(postContainer);
     });
 };
 window.onload = function () {

@@ -29,9 +29,26 @@ const blogEntries: Blog[] = [
   },
 ];
 
+const content = document.querySelector(".content");
+
 const addEntriesToDOM = () => {
   blogEntries.forEach((entry) => {
-    console.log(entry);
+    const postContainer = document.createElement("div");
+    const title = document.createElement("h1");
+    const desc = document.createElement("p");
+    const date = document.createElement("p");
+    const img = document.createElement("img");
+    postContainer.classList.add("blog");
+    title.innerHTML = entry.title;
+    desc.innerHTML = entry.description;
+    date.innerHTML = entry.date;
+    img.src = entry.image;
+    img.alt = entry.imageAlt;
+    postContainer.appendChild(title);
+    postContainer.appendChild(date);
+    postContainer.appendChild(desc);
+    postContainer.appendChild(img);
+    content?.appendChild(postContainer);
   });
 };
 

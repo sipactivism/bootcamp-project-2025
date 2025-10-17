@@ -28,3 +28,23 @@
 #contact-form input[type="submit"] {
   text-align: left;
 }
+
+.blog {
+  max-width: 50%;
+  border: 2px solid white;
+  margin-bottom: 15px;
+}
+
+.blog p {
+  margin: 0 auto;
+  margin-left: 5px;
+}
+
+.blog h1 {
+  margin-bottom: 0px;
+  margin-left: 5px;
+}
+
+.blog img {
+  width: 25%;
+}
