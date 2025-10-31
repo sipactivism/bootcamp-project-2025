@@ -4,23 +4,19 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    // replace everything in between the <header> & <header /> tags
-    // with your navbar code from your earlier milestones
-    // NOTE: we use "class" in HTML but React is quirky so we have to
-    // change all the "class" to "className"
     <header className={style.navbar}>
       <nav>
         <h1 className={style.logo}>Tobin's Site</h1>
         <ul className={style.navlist}>
-          <Link href="index.html">Home</Link>
+          <Link href="/">Home</Link>
           <span>|</span>
-          <Link href="blog.html">Blog</Link>
+          <Link href="/blog">Blog</Link>
           <span>|</span>
-          <Link href="portfolio.html">Portfolio</Link>
+          <Link href="/portfolio">Portfolio</Link>
           <span>|</span>
-          <Link href="resume.html">Resume</Link>
+          <Link href="/resume">Resume</Link>
           <span>|</span>
-          <Link href="contact.html">Contact</Link>
+          <Link href="/contact">Contact</Link>
         </ul>
       </nav>
     </header>
