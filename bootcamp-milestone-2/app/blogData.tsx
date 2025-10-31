@@ -1,13 +1,13 @@
-export type Blog = {
+export interface Blog {
   title: string;
   date: string;
   description: string;
   image: string;
   imageAlt: string;
   slug: string;
-};
+}
 
-export const blogEntries: Blog[] = [
+const blogEntries: Blog[] = [
   {
     title: "Hello world",
     date: "10-16-2025",
@@ -26,3 +26,5 @@ export const blogEntries: Blog[] = [
     slug: "blogs/subway.html",
   },
 ];
+
+export default blogEntries;
