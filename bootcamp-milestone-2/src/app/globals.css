@@ -4,3 +4,12 @@
   background-color: black;
   color: white;
 }
+
+.pagetitle {
+  font-size: 3em;
+}
+
+.content {
+  margin-top: 30px;
+  margin-left: 20px;
+}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "@/src/app/globals.css";
 import Navbar from "@/src/components/navbar";
 import Footer from "@/src/components/footer";
 
@@ -14,12 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Tobin's Personal Website",
-  description: "A personal website for Tobin.",
-};
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -30,7 +25,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        {children}
+        <main>
+          <div className="content">{children}</div>
+        </main>
         <Footer />
       </body>
     </html>

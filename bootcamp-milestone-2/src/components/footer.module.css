@@ -1,1 +1,5 @@
-
+.footer {
+  position: absolute;
+  top: calc(100% - 2em);
+  margin-left: 5px;
+}
